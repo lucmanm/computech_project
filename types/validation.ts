@@ -1,11 +1,8 @@
-import { z } from "zod";
-
-
-
-
+import { string, z } from "zod";
 
 // Product Schema
 export const productFormSchema = z.object({
+    id: string().optional(),
     model: z.string().min(4, "Model Number required").max(20),
     description: z.string().min(5, "Please Enter Product description"),
     price: z.coerce.number({

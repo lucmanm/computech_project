@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 interface ContainerProps {
   children: React.ReactNode;
-  classname: string;
+  classname?: string;
 }
 
 const Container: React.FC<ContainerProps> = ({ classname, children }) => {

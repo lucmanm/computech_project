@@ -4,6 +4,7 @@ import { Cairo } from "next/font/google";
 import Header from "./_components/header-components/Header";
 import { MobileButtomMenu } from "./_components/mobile-buttom-menu";
 import Footer from "./_components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const cairo = Cairo({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       </main>
       <MobileButtomMenu />
       <Footer />
+      <Toaster />
     </main>
   );
 }
