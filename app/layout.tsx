@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import ModalProvider from "@/hook/modal-provider";
 import { Cairo } from "next/font/google";
 
 const cairo = Cairo({ subsets: ["latin"] });

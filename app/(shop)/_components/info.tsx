@@ -1,10 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
-import { Brand, Product } from "@/types/table-types";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { TProduct } from "@/types/type";
+import Link from "next/link";
 
 type InfoProps = {
   prodoctData: TProduct
@@ -26,12 +23,13 @@ const Info: React.FC<InfoProps> = ({ prodoctData }) => {
       </div>
       <div className="w-full">
         <hr className="my-4" />
-        <Button
-          className={cn(`w-full items-center gap-2 rounded-full py-6 text-lg`)}
+        <Link
+        href={"https://api.whatsapp.com/send/?phone=%2B966562617554&text&type=phone_number&app_absent=0"}
+          className="flex bg-green-500 rounded-full py-3 justify-center gap-x-2 items-center text-slate-100"
         >
           <MessageCircle size={20} />
-          Contact #: 056 261 7554
-        </Button>
+          <span className="text-xl font-bold">WhatsApp</span>
+        </Link>
       </div>
     </div>
   );

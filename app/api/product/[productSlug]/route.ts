@@ -10,12 +10,13 @@ export async function GET(req: NextRequest, { params }: { params: { productSlug:
     const searchQuery = searchParams ? searchParams.get("brand") : null
     const decodeURI = decodeURIComponent(params.productSlug)
 
-    console.log(
-      "params:", decodeURI,
-      "params typeof:", typeof decodeURI,
-      "query:", searchQuery,
-      "query typeof:", typeof searchQuery,
-    );
+    // console.log(
+    //   "params:", decodeURI,
+    //   "params typeof:", typeof decodeURI,
+    //   "query:", searchQuery,
+    //   "query typeof:", typeof searchQuery,
+    // );
+
     if(decodeURI && (searchQuery === "undefined" ||  searchQuery === null) ){
       const productData = await prisma.product.findMany({
         where: {
